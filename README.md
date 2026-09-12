@@ -20,7 +20,7 @@ java src/view/Principal.java
 
 **Para executar os Testes:**
 ```bash
-java src/view/TestesUnitários.java
+java src/view/TestesUnitarios.java
 ```
 ---
 

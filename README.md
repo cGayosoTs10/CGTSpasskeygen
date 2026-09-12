@@ -13,7 +13,7 @@ __Projeto para a atividade prática de LPG3.__
 
 **Para executar o programa:**
 ```bash
-java src/view/TestesManuais.java
+java src/view/Principal.java
 ```
 ---
 ![Testes](Assets/LPIIITesteUnitário.png)
@@ -22,4 +22,9 @@ java src/view/TestesManuais.java
 ```bash
 java src/view/TestesUnitários.java
 ```
+---
 
+Fontes e Ferramentas:
+- Java: Como Programar 10° Edição -- Irmãos: Paul J. Deitel & Harvey Deitel;
+- Slides das Aulas de LPIII;
+- Neovim 0.12.5;

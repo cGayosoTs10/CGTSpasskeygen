@@ -3,9 +3,9 @@ package business;
 public class GeradorSenhaForte extends GeradorSenha {
     private final int tamanho;
     public GeradorSenhaForte(int tamanho) {
-        if (tamanho < 4) {
+        if (tamanho < 12) {
             throw new IllegalArgumentException(
-                "A senha precisa ter pelo menos 4 caracteres."
+                "A senha precisa ter pelo menos 12 caracteres."
             );
         }
 
@@ -14,21 +14,20 @@ public class GeradorSenhaForte extends GeradorSenha {
 
     @Override
     public String gerarSenha() {
-        StringBuilder senha = new StringBuilder(tamanho);
+	StringBuilder senha = new StringBuilder(tamanho);
 
-        senha.append(sortearCaractere(MAIUSCULAS));
+	senha.append(sortearCaractere(MAIUSCULAS));
         senha.append(sortearCaractere(MINUSCULAS));
         senha.append(sortearCaractere(NUMEROS));
         senha.append(sortearCaractere(ESPECIAIS));
 
-        String todosCaracteres =
-                MAIUSCULAS + MINUSCULAS + NUMEROS + ESPECIAIS;
+	String todosCaracteres =
+	    MAIUSCULAS + MINUSCULAS + NUMEROS + ESPECIAIS;
 
-        while (senha.length() < tamanho) {
-            senha.append(sortearCaractere(todosCaracteres));
+	while (senha.length() < tamanho) {
+	    senha.append(sortearCaractere(todosCaracteres));
         }
-
-        return embaralhar(senha.toString());
+    
+	return embaralhar(senha.toString());
     }
 }
-

@@ -1,17 +1,24 @@
 package view;
 
-import business.GeradorSenha;
+import business.GeradorPin;
+import business.GeradorSenhaForte;
+import business.IGeradorSenha;
 
 public class Principal {
 
     public static void main(String[] args) {
 
-        GeradorSenha gerador;
+        IGeradorSenha gerador;
 
-        // TODO:
-        // Gerar duas senhas fortes
-        // Gerar dois PINs
-        // Utilizar a variável "gerador" para demonstrar polimorfismo
+        gerador = new GeradorSenhaForte(12);
 
+        System.out.println("Senha forte 1: " + gerador.gerarSenha());
+        System.out.println("Senha forte 2: " + gerador.gerarSenha());
+
+        gerador = new GeradorPin();
+
+        System.out.println("PIN 1: " + gerador.gerarSenha());
+        System.out.println("PIN 2: " + gerador.gerarSenha()); // Debug basicão.
     }
 }
+

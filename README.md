@@ -10,12 +10,14 @@ __Projeto para a atividade prática de LPG3.__
 
 ---
 ![Output](Assets/LPIIITeste.png)
+
 **Para executar o programa:**
 ```bash
 java src/view/TestesManuais.java
 ```
 ---
 ![Testes](Assets/LPIIITesteUnitário.png)
+
 **Para executar os Testes:**
 ```bash
 java src/view/TestesUnitários.java
